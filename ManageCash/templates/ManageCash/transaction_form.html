@@ -1,0 +1,12 @@
+{% extends 'ManageCash/base.html' %}
+
+{% block content %}
+<section class="auth-panel">
+    <h1>{{ title }}</h1>
+    <form method="post" class="form-panel">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</section>
+{% endblock %}
